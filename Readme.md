@@ -3,13 +3,13 @@
 
 # O que influencia no sucesso da conversão de uma campanha?
 
-É isso que irei descobrir e apresentar aqui neste artigo!
+### É isso que irei descobrir e apresentar aqui neste artigo!
 
-![](https://cdn-images-1.medium.com/max/800/1*n8ovg5LWroUzg60ByT6f1g.jpeg)
+![](https://cdn-images-1.medium.com/max/800/1*cbZu5IQKnVJgF3V19u1MOQ.jpeg)
 
 Apresentarei uma análise detalhada onde o objetivo é encontrar quais variáveis influenciam a conversão de clientes em uma campanha bancária.
 
-## Vem comigo e acompanha o raciocínio!
+### Vem comigo e acompanha o raciocínio!
 
 Para essa análise utilizei dados do Kaggle, onde o dataset possui dados de uma campanha de marketing telefônico de uma instituição bancária portuguesa onde o objetivo foi oferecer o **depósito a prazo**.
 

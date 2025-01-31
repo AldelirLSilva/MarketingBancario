@@ -1,6 +1,3 @@
-
-----------
-
 # O que influencia no sucesso da conversão de uma campanha?
 
 ### É isso que irei descobrir e apresentar aqui neste artigo!
@@ -21,37 +18,33 @@ _No entanto, elas exigem um grande investimento, pois grandes call centers são 
 
 [https://www.kaggle.com/datasets/prakharrathi25/banking-dataset-marketing-targets?select=train.csv](https://www.kaggle.com/datasets/prakharrathi25/banking-dataset-marketing-targets?select=train.csv)
 
-----------
 
 ## Análise Exploratória dos Dados
 
 Aqui está uma breve descrição dos dados que o kaggle disponibilizou:
 
 ### Dados pessoais
-
-**age**: (*numérico*)
-**job**: tipo de emprego (categórico: *“admin”, ”unknown”, ”unemployed”, ”management”, ”housemaid”, ”entrepreneur”, ”student”, “blue-collar”, ”self-employed”, ”retired”, ”technician”, ”services”*)  
-**marital**: estado civil (_categórico: “married”, ”divorced”, ”single”; nota: “divorced” significa divorciado ou viúvo_)  
-**education** (_categórico: “unknown”,”secondary”,”primary”,”tertiary”_)  
-**default**: tem crédito em inadimplência? (_binário: “yes”, “no”_)  
-**balance**: saldo médio anual, em euros (_numérico_)  
-**housing**: tem empréstimo imobiliário? (_binário: “yes”, “no”_)  
-**loan**: tem empréstimo pessoal? (_binário: “yes”, “no”_)  
-**contact**: tipo de comunicação de contato (_categórico: “unknown”,”telephone”,”cellular”_)
+`age`: (*numérico*)  
+`job`: tipo de emprego (categórico: *“admin”, ”unknown”, ”unemployed”, ”management”, ”housemaid”, ”entrepreneur”, ”student”, “blue-collar”, ”self-employed”, ”retired”, ”technician”, ”services”*)  
+`marital`: estado civil (_categórico: “married”, ”divorced”, ”single”; nota: “divorced” significa divorciado ou viúvo_)  
+`education` (_categórico: “unknown”,”secondary”,”primary”,”tertiary”_)  
+`default`: tem crédito em inadimplência? (_binário: “yes”, “no”_)  
+`balance`: saldo médio anual, em euros (_numérico_)  
+`housing`: tem empréstimo imobiliário? (_binário: “yes”, “no”_)  
+`loan`: tem empréstimo pessoal? (_binário: “yes”, “no”_)  
+`contact`: tipo de comunicação de contato (_categórico: “unknown”,”telephone”,”cellular”_)
 
 ### Campanha Atual
-
-**day**: último dia de contato do mês (_numérico_)  
-**month**: último mês de contato do ano (_categórico: “jan”, “feb”, “mar”, …, “nov”, “dec”)_  
-**duration**: duração do último contato, em segundos (_numérico_)  
-**campaign**: número de contatos realizados durante esta campanha e para este cliente (_numérico, inclui o último contato_)  
-**y**: o cliente subscreveu um depósito a prazo? (_binário: “yes”, “no”_)
+`day`: último dia de contato do mês (_numérico_)  
+`month`: último mês de contato do ano (_categórico: “jan”, “feb”, “mar”, …, “nov”, “dec”)_  
+`duration`: duração do último contato, em segundos (_numérico_)  
+`campaign`: número de contatos realizados durante esta campanha e para este cliente (_numérico, inclui o último contato_)  
+`y`: o cliente subscreveu um depósito a prazo? (_binário: “yes”, “no”_)
 
 ### Campanha Anterior
-
-**pdays**: número de dias que se passaram após o cliente ter sido contatado pela última vez de uma campanha anterior (_numérico, -1 significa que o cliente não foi contatado anteriormente_)  
-**previous**: número de contatos realizados antes desta campanha e para este cliente (_numérico_)  
-**poutcome**: resultado da campanha de marketing anterior (_categórico: “unknown”,”other”,”failure”,”success”_)
+`pdays`: número de dias que se passaram após o cliente ter sido contatado pela última vez de uma campanha anterior (_numérico, -1 significa que o cliente não foi contatado anteriormente_)  
+`previous`: número de contatos realizados antes desta campanha e para este cliente (_numérico_)  
+`poutcome`: resultado da campanha de marketing anterior (_categórico: “unknown”,”other”,”failure”,”success”_)
 
 Temos quase total entendimento dos dados, falta só **visualizá-los**!
 
@@ -70,19 +63,12 @@ Claramente entre as variáveis quantitativas a `Duracao`é a que tem maior corre
 Agora vamos correlacionar as variáveis **qualitativas**:
 
 ![](https://cdn-images-1.medium.com/max/800/1*eARxq-ngg7dYEvqkHHy8Vw.png)
-
 ![](https://cdn-images-1.medium.com/max/800/1*L3UBzs2EM4sAddj1C9B85A.png)
-
 ![](https://cdn-images-1.medium.com/max/800/1*RwXYtrVTXMvB17vqmCOLBA.png)
-
 ![](https://cdn-images-1.medium.com/max/800/1*_kjhZr4v9LVmqdfgGFd-0w.png)
-
 ![](https://cdn-images-1.medium.com/max/800/1*QPi4LriBjMyYieZmRAvYmg.png)
-
 ![](https://cdn-images-1.medium.com/max/800/1*h4Ped4v3oMAvADLeRlJMuw.png)
-
 ![](https://cdn-images-1.medium.com/max/800/1*sYKCjy6uB8LVON5cM_p24g.png)
-
 ![](https://cdn-images-1.medium.com/max/800/1*mofiliCC1Sd1Mmw76DF9QQ.png)
 
 Com toda certeza posso dizer que o **sucesso da campanha anterior** tem relação com o **sucesso da campanha atual**, quase que chega a uma correlação forte, diferente das demais.
@@ -90,14 +76,13 @@ Com toda certeza posso dizer que o **sucesso da campanha anterior** tem relaçã
 Só que ainda faltam 2 variáveis para verificar: `Dia`e  `Mes`
 
 ![](https://cdn-images-1.medium.com/max/800/1*pH-5IXEh6tOeFlPQXC2SHg.png)
-
 ![](https://cdn-images-1.medium.com/max/800/1*_tF4i3h_YLlH9bEBLNLX0A.png)
 
 Mais subcategorias que se destacam com seu alto nível de correlação! Em específico: _março, dezembro, setembro_ e _outubro_.
 
 ### **Inicialmente posso concluir que essas 3 variáveis possuem certa influência no sucesso da campanha:**
 
-`Resuldado_camp_ant`= success;
+`Resuldado_camp_ant`= success;  
 `Mes`= _mar, dec, sep e oct;  
 `Duracao.`
 
@@ -130,15 +115,14 @@ Para finalizar vamos ver como está a distribuição da variável `Conversao`:
 
 A variável está desbalanceada, será necessário balancear para usá-la no modelo.
 
-----------
 
 ## **Agora é hora da verdade! Será que essas variáveis realmente influenciam na conversão de um cliente?**
 
-Nessa ultima etapa da análise eu trouxe o melhor teste estatístico! O teste que resultou em um modelo de 92% de acurácia.
+Nessa ultima etapa da análise eu trouxe o melhor teste estatístico! O teste que resultou em um modelo de `92%` de acurácia.
 
 ### **Árvore de decisão**!
 
-> A árvore de decisão apresenta diversas vantagens!
+`A árvore de decisão apresenta diversas vantagens!`
 
 _“Mais robusta contra outliers, além de ser flexível para modelar relações não lineares e detectar interações automaticamente. Outro ponto forte é a facilidade em trabalhar diretamente com variáveis categóricas e contínuas, sem necessidade de transformações como na regressão logística._
 
@@ -154,17 +138,17 @@ Primeiro o treinamento do modelo com a biblioteca **sklearn.tree** e o comando *
 
 E agora vamos ao resultado das métricas de classificação:
 
-#### 1- Teste de Overfitting
+#### Teste de Overfitting
 
-O **teste de overfitting** foca especificamente na diferença de desempenho entre treino e teste para determinar se o modelo está superajustado.
+O teste de overfitting foca especificamente na diferença de desempenho entre treino e teste para determinar se o modelo está superajustado.
 
 ![](https://cdn-images-1.medium.com/max/800/1*Dt0D-2cRE3N06nRGGaMd7g.png)
 
 -   O Overfitting de 5% é muito baixo, demonstrando que não teremos uma influência negativa no modelo.
 
-#### 2- Validação cruzada k-fold
+#### Validação cruzada k-fold
 
-A **validação cruzada k-fold** é um método abrangente para verificar a robustez e a generalização do modelo.
+A validação cruzada k-fold é um método abrangente para verificar a robustez e a generalização do modelo.
 
 ![](https://cdn-images-1.medium.com/max/800/1*e2vaQLRkBROBN6vkgKgOWA.png)
 
@@ -179,14 +163,14 @@ A árvore de decisão apresenta um ótimo desempenho geral, com métricas altas 
 
 ### Minhas recomendações para o banco!
 
--   **Aumentar o tempo médio de interação com clientes:** os vendedores devem estar preparados para conduzir o cliente até o sucesso da conversão.
--   **Focar as campanhas nos meses com alta conversão:** _março, dezembro, setembro_ e _outubro_.
--   **Criar estratégias de retenção para clientes que tiveram campanhas anteriores bem-sucedidas.**
+-   `Aumentar o tempo médio de interação com clientes`: os vendedores devem estar preparados para conduzir o cliente até o sucesso da conversão.
+-   `Focar as campanhas nos meses com alta conversão`: _março, dezembro, setembro_ e _outubro_.
+-   `Criar estratégias de retenção para clientes que tiveram campanhas anteriores bem-sucedidas.`
 
-Isso por si só aumentaria consideravelmente os futuros resultados na execução dessa campanha.
+### Isso por si só aumentaria consideravelmente os futuros resultados na execução dessa campanha.
 
-Eu poderia usar esse modelo para prever quais clientes do banco têm potencial de conversão com uma taxa de assertividade de 92%, mas não posso incluir as variáveis `Duracao` e `Mes`, pois elas foram geradas pela campanha atual e o objetivo é prever os resultados dessa mesma campanha.
+Se as variáveis `Duracao` e `Mes` não fossem geradas pela campanha atual, eu poderia usar esse modelo para prever quais clientes do banco têm potencial de conversão com uma taxa de assertividade de `92%`.
 
-Em vez disso, em um futuro artigo, utilizarei uma abordagem diferente para identificar quais variáveis pessoais e da campanha anterior influenciam a conversão, podendo assim utilizá-las para prever os clientes que irão converter.
+Como não é possível agora, em um futuro artigo, pretendo utilizar uma abordagem diferente para identificar quais outras variáveis influenciam a conversão, podendo assim prever os clientes que irão converter.
 
 ## Fim
